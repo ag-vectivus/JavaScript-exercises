@@ -38,3 +38,19 @@ Assume that:
 
 In your solution, focus on correctness. The performance of your solution will not be the focus of the assessment.
 Copyright 2009–2020 by Codility Limited. All Rights Reserved. Unauthorized copying, publication or disclosure prohibited.  */
+
+A = [3, 8, 9, 7, 6]
+K = 3;
+
+function solution(A, K) {
+  for (let i = 0; i < K; i++) {
+    const lastIndex = A.length - 1;
+    const lastElement = A[lastIndex];
+    A.pop(lastIndex);
+    A.unshift(lastElement);
+    console.log(A);
+  };
+};
+
+console.log(A);
+solution(A, K);
